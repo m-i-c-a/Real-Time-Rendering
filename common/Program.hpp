@@ -87,4 +87,13 @@ void set_uni_mat4(const GLuint program_handle, const char* uni_name, const float
    glUniformMatrix4fv(glGetUniformLocation(program_handle, uni_name), 1, GL_FALSE, matrix);
 }
 
+void set_uni_vec3(const GLuint program_handle, const char* uni_name, const float* vec) {
+   glUniform3fv(glGetUniformLocation(program_handle, uni_name), 1, vec);
+}
+
+void set_uni_float(const GLuint program_handle, const char* uni_name, const float f) {
+   glUniform1f(glGetUniformLocation(program_handle, uni_name), f);
+}
+
+
 #endif // PROGRAM_HPP
