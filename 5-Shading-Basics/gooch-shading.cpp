@@ -23,6 +23,66 @@ struct Window {
     NULL
 };
 
+struct Camera {
+    double yaw = -1.0f * glm::half_pi<double>();
+    double pitch = 0.0f;
+    glm::mat4 matrix { 1.0f };
+} g_camera;
+
+static bool mouse_down = false;
+static glm::vec2 prev_mouse_pos { 0.0f, 0.0f };
+
+static void update_camera() {
+
+    const glm::vec3 pos {
+        glm::cos(g_camera.yaw) * glm::cos(g_camera.pitch),
+        glm::sin(g_camera.pitch),
+        glm::sin(g_camera.yaw) * glm::cos(g_camera.pitch) };
+    
+    glm::vec3 forward = glm::normalize(-1.0f * pos);
+    glm::vec3 up { 0.0f, 1.0f, 0.0f };
+    glm::vec3 right = glm::normalize(glm::cross(forward, up));
+    up = glm::normalize(glm::cross(right, forward));
+
+    g_camera.matrix = glm::lookAt(pos, forward, up);
+
+    // This wasn't giving correct reutls, idk why
+    // g_camera.matrix = {
+    //     right.x, right.y, right.z, -g_camera.pos.x,
+    //     up.x, up.y, up.z, -g_camera.pos.y,
+    //     forward.x, forward.y, forward.z, -g_camera.pos.z, 
+    //     0.0f, 0.0f, 0.0f, 1.0f
+    // };
+}
+
+static void cursor_position_callback(GLFWwindow* window, double xpos, double ypos) {
+    if (mouse_down) {
+        // drag across screen = pi radians of rotation
+        const double delta_x = -1.0f * glm::pi<double>() * (prev_mouse_pos.x - xpos) / g_window.width ;
+        const double delta_y = -1.0f * glm::pi<double>() * (prev_mouse_pos.y - ypos) / g_window.height;
+
+        g_camera.yaw += delta_x;
+        if (g_camera.yaw > glm::two_pi<double>()) g_camera.yaw -= glm::two_pi<double>();
+        if (g_camera.yaw < -1.0f * glm::two_pi<double>()) g_camera.yaw += glm::two_pi<double>();
+
+        g_camera.pitch = glm::clamp(g_camera.pitch + delta_y, -1.0f * glm::half_pi<double>() + 0.01f, glm::half_pi<double>() - 0.01f);
+
+        update_camera();
+    }
+
+    prev_mouse_pos.x = xpos;
+    prev_mouse_pos.y = ypos;
+}
+
+static void mouse_button_callback(GLFWwindow* window, int button, int action, int mods) {
+    if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) {
+        mouse_down = true;
+    }
+    else {
+        mouse_down = false;
+    }
+}
+
 enum {
     PROGRAM_GOOCH_SHADING,
 
@@ -30,14 +90,12 @@ enum {
 };
 
 enum {
-    VERTEXARRAY_TRIANGLE,
     VERTEXARRAY_DRAGON,
 
     VERTEXARRAY_COUNT
 };
 
 enum {
-    BUFFER_TRIANGLE,
     BUFFER_DRAGON_VERTICES,
 
     BUFFER_COUNT
@@ -58,46 +116,42 @@ struct App {
 } g_app;
 
 void Load() {
+    glm::mat4 proj_matrix = glm::ortho(-1.0f, 1.0f, -1.0f, 1.0f, -2.0f, 2.0f);
+    glm::mat4 view_matrix = glm::mat4 { 1.0f };
+
+    update_camera();
+
     // create programs
     g_gl.programs[PROGRAM_GOOCH_SHADING] = 
         create_program("../5-Shading-Basics/shaders/gooch-shading.vert",
                        "../5-Shading-Basics/shaders/gooch-shading.frag",
                        "Gooch Shading");
 
+    glUseProgram(g_gl.programs[PROGRAM_GOOCH_SHADING]);
+    set_uni_mat4(g_gl.programs[PROGRAM_GOOCH_SHADING], "u_proj_matrix", &(proj_matrix[0][0]));
+    set_uni_mat4(g_gl.programs[PROGRAM_GOOCH_SHADING], "u_view_matrix", &(g_camera.matrix[0][0]));
+    glUseProgram(0u);
+    
+    glGenVertexArrays(VERTEXARRAY_COUNT, g_gl.vertexarrays);
+    glGenBuffers(BUFFER_COUNT, g_gl.buffers);
+
     // load in a gltf file
     load_model("../assets/dragon.obj",
                &g_gl.vertexarrays[VERTEXARRAY_DRAGON],
                &g_gl.buffers[BUFFER_DRAGON_VERTICES],
                &g_app.vertex_counts[VERTEXARRAY_DRAGON]);
-
-    float triangle_vertices[] = {
-        -0.5f, -0.5f, 0.0f,
-         0.5f, -0.5f, 0.0f,
-         0.f ,  0.5f, 0.0f,
-    };
-
-    glGenVertexArrays(1, &g_gl.vertexarrays[VERTEXARRAY_TRIANGLE]);
-    glBindVertexArray(g_gl.vertexarrays[VERTEXARRAY_TRIANGLE]);
-
-    glCreateBuffers(1, &g_gl.buffers[BUFFER_TRIANGLE]);
-    glBindBuffer(GL_ARRAY_BUFFER, g_gl.buffers[BUFFER_TRIANGLE]);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(triangle_vertices), (void*)triangle_vertices, GL_STATIC_DRAW);
-    glVertexAttribPointer(0u, 3, GL_FLOAT, GL_FALSE, sizeof(float) * 3, (void*)0); 
-    glEnableVertexAttribArray(0u);
-
-    g_app.vertex_counts[VERTEXARRAY_TRIANGLE] = 3;
 }
 
 void Draw()
 {
-    glClear(GL_COLOR_BUFFER_BIT);
     glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
 
     glUseProgram(g_gl.programs[PROGRAM_GOOCH_SHADING]);
-    // glBindVertexArray(g_gl.vertexarrays[VERTEXARRAY_DRAGON]);
-    // glDrawArrays(GL_TRIANGLES, 0, g_app.vertex_counts[VERTEXARRAY_DRAGON]);
-    glBindVertexArray(g_gl.vertexarrays[VERTEXARRAY_TRIANGLE]);
-    glDrawArrays(GL_TRIANGLES, 0, g_app.vertex_counts[VERTEXARRAY_TRIANGLE]);
+    set_uni_mat4(g_gl.programs[PROGRAM_GOOCH_SHADING], "u_view_matrix", &(g_camera.matrix[0][0]));
+    glBindVertexArray(g_gl.vertexarrays[VERTEXARRAY_DRAGON]);
+    glDrawArrays(GL_TRIANGLES, 0, g_app.vertex_counts[VERTEXARRAY_DRAGON]);
+    glUseProgram(0u);
 }
 
 void Release() {
@@ -118,6 +172,9 @@ int main() {
         EXIT("Failed to create glfw window!");
     }
     glfwMakeContextCurrent(g_window.handle);
+    glfwSetCursorPosCallback(g_window.handle, cursor_position_callback);
+    glfwSetMouseButtonCallback(g_window.handle, mouse_button_callback);
+    glfwSwapInterval(1);
 
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
         EXIT("Failed to initialize GLAD!");

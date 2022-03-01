@@ -35,6 +35,10 @@ sstream
 -
 glad/glad.h
 -
+glm/glm.hpp
+-
+glm/gtc/type_ptr.hpp
+-
 Defines.hpp
 ../common/Defines.hpp
 

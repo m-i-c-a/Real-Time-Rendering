@@ -6,6 +6,8 @@
 #include <sstream>
 
 #include <glad/glad.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 #include "Defines.hpp"
 
@@ -79,6 +81,10 @@ GLuint create_program(const std::string& vertex_shader_path, const std::string& 
    glDeleteShader(fragment_shader_handle);
 
    return shader_program_handle;
+}
+
+void set_uni_mat4(const GLuint program_handle, const char* uni_name, const float* matrix) {
+   glUniformMatrix4fv(glGetUniformLocation(program_handle, uni_name), 1, GL_FALSE, matrix);
 }
 
 #endif // PROGRAM_HPP
