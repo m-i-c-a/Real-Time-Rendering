@@ -74,7 +74,8 @@ clean: 5-Shading-Basics/clean
 # Directory level rules for directory 5-Shading-Basics
 
 # Recursive "all" directory target.
-5-Shading-Basics/all: 5-Shading-Basics/CMakeFiles/gooch-shading.dir/all
+5-Shading-Basics/all: 5-Shading-Basics/CMakeFiles/punctual-lights.dir/all
+5-Shading-Basics/all: 5-Shading-Basics/CMakeFiles/phong-shading.dir/all
 
 .PHONY : 5-Shading-Basics/all
 
@@ -84,7 +85,8 @@ clean: 5-Shading-Basics/clean
 .PHONY : 5-Shading-Basics/preinstall
 
 # Recursive "clean" directory target.
-5-Shading-Basics/clean: 5-Shading-Basics/CMakeFiles/gooch-shading.dir/clean
+5-Shading-Basics/clean: 5-Shading-Basics/CMakeFiles/punctual-lights.dir/clean
+5-Shading-Basics/clean: 5-Shading-Basics/CMakeFiles/phong-shading.dir/clean
 
 .PHONY : 5-Shading-Basics/clean
 
@@ -178,7 +180,7 @@ submodules/glfw/CMakeFiles/uninstall.dir/clean:
 submodules/glfw/src/CMakeFiles/update_mappings.dir/all:
 	$(MAKE) -f submodules/glfw/src/CMakeFiles/update_mappings.dir/build.make submodules/glfw/src/CMakeFiles/update_mappings.dir/depend
 	$(MAKE) -f submodules/glfw/src/CMakeFiles/update_mappings.dir/build.make submodules/glfw/src/CMakeFiles/update_mappings.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mica/Desktop/Books/Real-Time-Rendering/build/CMakeFiles --progress-num=27 "Built target update_mappings"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mica/Desktop/Books/Real-Time-Rendering/build/CMakeFiles --progress-num=44 "Built target update_mappings"
 .PHONY : submodules/glfw/src/CMakeFiles/update_mappings.dir/all
 
 # Build rule for subdir invocation for target.
@@ -226,31 +228,58 @@ submodules/glfw/src/CMakeFiles/glfw.dir/clean:
 .PHONY : submodules/glfw/src/CMakeFiles/glfw.dir/clean
 
 #=============================================================================
-# Target rules for target 5-Shading-Basics/CMakeFiles/gooch-shading.dir
+# Target rules for target 5-Shading-Basics/CMakeFiles/punctual-lights.dir
 
 # All Build rule for target.
-5-Shading-Basics/CMakeFiles/gooch-shading.dir/all: submodules/glfw/src/CMakeFiles/glfw.dir/all
-	$(MAKE) -f 5-Shading-Basics/CMakeFiles/gooch-shading.dir/build.make 5-Shading-Basics/CMakeFiles/gooch-shading.dir/depend
-	$(MAKE) -f 5-Shading-Basics/CMakeFiles/gooch-shading.dir/build.make 5-Shading-Basics/CMakeFiles/gooch-shading.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mica/Desktop/Books/Real-Time-Rendering/build/CMakeFiles --progress-num=24,25,26 "Built target gooch-shading"
-.PHONY : 5-Shading-Basics/CMakeFiles/gooch-shading.dir/all
+5-Shading-Basics/CMakeFiles/punctual-lights.dir/all: submodules/glfw/src/CMakeFiles/glfw.dir/all
+	$(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/depend
+	$(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mica/Desktop/Books/Real-Time-Rendering/build/CMakeFiles --progress-num=34,35,36,37,38,39,40,41,42,43 "Built target punctual-lights"
+.PHONY : 5-Shading-Basics/CMakeFiles/punctual-lights.dir/all
 
 # Build rule for subdir invocation for target.
-5-Shading-Basics/CMakeFiles/gooch-shading.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mica/Desktop/Books/Real-Time-Rendering/build/CMakeFiles 26
-	$(MAKE) -f CMakeFiles/Makefile2 5-Shading-Basics/CMakeFiles/gooch-shading.dir/all
+5-Shading-Basics/CMakeFiles/punctual-lights.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mica/Desktop/Books/Real-Time-Rendering/build/CMakeFiles 33
+	$(MAKE) -f CMakeFiles/Makefile2 5-Shading-Basics/CMakeFiles/punctual-lights.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mica/Desktop/Books/Real-Time-Rendering/build/CMakeFiles 0
-.PHONY : 5-Shading-Basics/CMakeFiles/gooch-shading.dir/rule
+.PHONY : 5-Shading-Basics/CMakeFiles/punctual-lights.dir/rule
 
 # Convenience name for target.
-gooch-shading: 5-Shading-Basics/CMakeFiles/gooch-shading.dir/rule
+punctual-lights: 5-Shading-Basics/CMakeFiles/punctual-lights.dir/rule
 
-.PHONY : gooch-shading
+.PHONY : punctual-lights
 
 # clean rule for target.
-5-Shading-Basics/CMakeFiles/gooch-shading.dir/clean:
-	$(MAKE) -f 5-Shading-Basics/CMakeFiles/gooch-shading.dir/build.make 5-Shading-Basics/CMakeFiles/gooch-shading.dir/clean
-.PHONY : 5-Shading-Basics/CMakeFiles/gooch-shading.dir/clean
+5-Shading-Basics/CMakeFiles/punctual-lights.dir/clean:
+	$(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/clean
+.PHONY : 5-Shading-Basics/CMakeFiles/punctual-lights.dir/clean
+
+#=============================================================================
+# Target rules for target 5-Shading-Basics/CMakeFiles/phong-shading.dir
+
+# All Build rule for target.
+5-Shading-Basics/CMakeFiles/phong-shading.dir/all: submodules/glfw/src/CMakeFiles/glfw.dir/all
+	$(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/depend
+	$(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mica/Desktop/Books/Real-Time-Rendering/build/CMakeFiles --progress-num=24,25,26,27,28,29,30,31,32,33 "Built target phong-shading"
+.PHONY : 5-Shading-Basics/CMakeFiles/phong-shading.dir/all
+
+# Build rule for subdir invocation for target.
+5-Shading-Basics/CMakeFiles/phong-shading.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mica/Desktop/Books/Real-Time-Rendering/build/CMakeFiles 33
+	$(MAKE) -f CMakeFiles/Makefile2 5-Shading-Basics/CMakeFiles/phong-shading.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mica/Desktop/Books/Real-Time-Rendering/build/CMakeFiles 0
+.PHONY : 5-Shading-Basics/CMakeFiles/phong-shading.dir/rule
+
+# Convenience name for target.
+phong-shading: 5-Shading-Basics/CMakeFiles/phong-shading.dir/rule
+
+.PHONY : phong-shading
+
+# clean rule for target.
+5-Shading-Basics/CMakeFiles/phong-shading.dir/clean:
+	$(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/clean
+.PHONY : 5-Shading-Basics/CMakeFiles/phong-shading.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

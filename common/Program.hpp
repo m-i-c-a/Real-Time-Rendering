@@ -83,16 +83,33 @@ GLuint create_program(const std::string& vertex_shader_path, const std::string& 
    return shader_program_handle;
 }
 
+GLint get_uniform(const GLuint program_handle, const char* uni_name) {
+   GLint loc = glGetUniformLocation(program_handle, uni_name);
+   switch (loc) {
+      case -1:
+         std::cout << uni_name << " is not a valid uniform!\n";
+         break;
+      case GL_INVALID_VALUE:
+         std::cout << program_handle << " is not a program!\n";
+         break;
+      case GL_INVALID_OPERATION:
+         std::cout << program_handle << " is not a program!\n";
+         break;
+   };
+   return loc;
+}
+
+
 void set_uni_mat4(const GLuint program_handle, const char* uni_name, const float* matrix) {
-   glUniformMatrix4fv(glGetUniformLocation(program_handle, uni_name), 1, GL_FALSE, matrix);
+   glUniformMatrix4fv(get_uniform(program_handle, uni_name), 1, GL_FALSE, matrix);
 }
 
 void set_uni_vec3(const GLuint program_handle, const char* uni_name, const float* vec) {
-   glUniform3fv(glGetUniformLocation(program_handle, uni_name), 1, vec);
+   glUniform3fv(get_uniform(program_handle, uni_name), 1, vec);
 }
 
 void set_uni_float(const GLuint program_handle, const char* uni_name, const float f) {
-   glUniform1f(glGetUniformLocation(program_handle, uni_name), f);
+   glUniform1f(get_uniform(program_handle, uni_name), f);
 }
 
 

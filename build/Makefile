@@ -196,17 +196,30 @@ glfw/fast:
 .PHONY : glfw/fast
 
 #=============================================================================
-# Target rules for targets named gooch-shading
+# Target rules for targets named punctual-lights
 
 # Build rule for target.
-gooch-shading: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gooch-shading
-.PHONY : gooch-shading
+punctual-lights: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 punctual-lights
+.PHONY : punctual-lights
 
 # fast build rule for target.
-gooch-shading/fast:
-	$(MAKE) -f 5-Shading-Basics/CMakeFiles/gooch-shading.dir/build.make 5-Shading-Basics/CMakeFiles/gooch-shading.dir/build
-.PHONY : gooch-shading/fast
+punctual-lights/fast:
+	$(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build
+.PHONY : punctual-lights/fast
+
+#=============================================================================
+# Target rules for targets named phong-shading
+
+# Build rule for target.
+phong-shading: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 phong-shading
+.PHONY : phong-shading
+
+# fast build rule for target.
+phong-shading/fast:
+	$(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/build
+.PHONY : phong-shading/fast
 
 # Help Target
 help:
@@ -223,7 +236,8 @@ help:
 	@echo "... uninstall"
 	@echo "... update_mappings"
 	@echo "... glfw"
-	@echo "... gooch-shading"
+	@echo "... punctual-lights"
+	@echo "... phong-shading"
 .PHONY : help
 
 

@@ -64,8 +64,8 @@ void load_model(const std::string filepath, GLuint* vertexarray_handle, GLuint* 
 
                 // Check if `texcoord_index` is zero or positive. negative = no texcoord data
                 if (idx.texcoord_index >= 0) {
-                    vert.norm[0] = attrib.texcoords[2*size_t(idx.texcoord_index)+0];
-                    vert.norm[1] = attrib.texcoords[2*size_t(idx.texcoord_index)+1];
+                    vert.uv[0] = attrib.texcoords[2*size_t(idx.texcoord_index)+0];
+                    vert.uv[1] = attrib.texcoords[2*size_t(idx.texcoord_index)+1];
                 }
 
                 vertices.push_back(vert);
@@ -82,15 +82,15 @@ void load_model(const std::string filepath, GLuint* vertexarray_handle, GLuint* 
     glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex),
                 (void*)(vertices.data()), GL_STATIC_DRAW);
     
-    glEnableVertexAttribArray(0u);
     glVertexAttribPointer(0u, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex),
                         (void*)offsetof(Vertex, pos));
-    glEnableVertexAttribArray(1u);
+    glEnableVertexAttribArray(0u);
     glVertexAttribPointer(1u, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex),
                         (void*)offsetof(Vertex, norm));
-    glEnableVertexAttribArray(2u);
+    glEnableVertexAttribArray(1u);
     glVertexAttribPointer(2u, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex),
                         (void*)offsetof(Vertex, uv));
+    glEnableVertexAttribArray(2u);
 
     glBindVertexArray(0u);
 }

@@ -76,5 +76,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "submodules/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake"
   "submodules/glfw/src/CMakeFiles/update_mappings.dir/DependInfo.cmake"
   "submodules/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
-  "5-Shading-Basics/CMakeFiles/gooch-shading.dir/DependInfo.cmake"
+  "5-Shading-Basics/CMakeFiles/punctual-lights.dir/DependInfo.cmake"
+  "5-Shading-Basics/CMakeFiles/phong-shading.dir/DependInfo.cmake"
   )

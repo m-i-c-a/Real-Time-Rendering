@@ -157,19 +157,34 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-5-Shading-Basics/CMakeFiles/gooch-shading.dir/rule:
-	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f CMakeFiles/Makefile2 5-Shading-Basics/CMakeFiles/gooch-shading.dir/rule
-.PHONY : 5-Shading-Basics/CMakeFiles/gooch-shading.dir/rule
+5-Shading-Basics/CMakeFiles/punctual-lights.dir/rule:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f CMakeFiles/Makefile2 5-Shading-Basics/CMakeFiles/punctual-lights.dir/rule
+.PHONY : 5-Shading-Basics/CMakeFiles/punctual-lights.dir/rule
 
 # Convenience name for target.
-gooch-shading: 5-Shading-Basics/CMakeFiles/gooch-shading.dir/rule
+punctual-lights: 5-Shading-Basics/CMakeFiles/punctual-lights.dir/rule
 
-.PHONY : gooch-shading
+.PHONY : punctual-lights
 
 # fast build rule for target.
-gooch-shading/fast:
-	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/gooch-shading.dir/build.make 5-Shading-Basics/CMakeFiles/gooch-shading.dir/build
-.PHONY : gooch-shading/fast
+punctual-lights/fast:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build
+.PHONY : punctual-lights/fast
+
+# Convenience name for target.
+5-Shading-Basics/CMakeFiles/phong-shading.dir/rule:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f CMakeFiles/Makefile2 5-Shading-Basics/CMakeFiles/phong-shading.dir/rule
+.PHONY : 5-Shading-Basics/CMakeFiles/phong-shading.dir/rule
+
+# Convenience name for target.
+phong-shading: 5-Shading-Basics/CMakeFiles/phong-shading.dir/rule
+
+.PHONY : phong-shading
+
+# fast build rule for target.
+phong-shading/fast:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/build
+.PHONY : phong-shading/fast
 
 __/common/glad/glad.o: __/common/glad/glad.c.o
 
@@ -177,7 +192,8 @@ __/common/glad/glad.o: __/common/glad/glad.c.o
 
 # target to build an object file
 __/common/glad/glad.c.o:
-	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/gooch-shading.dir/build.make 5-Shading-Basics/CMakeFiles/gooch-shading.dir/__/common/glad/glad.c.o
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/common/glad/glad.c.o
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/common/glad/glad.c.o
 .PHONY : __/common/glad/glad.c.o
 
 __/common/glad/glad.i: __/common/glad/glad.c.i
@@ -186,7 +202,8 @@ __/common/glad/glad.i: __/common/glad/glad.c.i
 
 # target to preprocess a source file
 __/common/glad/glad.c.i:
-	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/gooch-shading.dir/build.make 5-Shading-Basics/CMakeFiles/gooch-shading.dir/__/common/glad/glad.c.i
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/common/glad/glad.c.i
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/common/glad/glad.c.i
 .PHONY : __/common/glad/glad.c.i
 
 __/common/glad/glad.s: __/common/glad/glad.c.s
@@ -195,35 +212,273 @@ __/common/glad/glad.s: __/common/glad/glad.c.s
 
 # target to generate assembly for a file
 __/common/glad/glad.c.s:
-	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/gooch-shading.dir/build.make 5-Shading-Basics/CMakeFiles/gooch-shading.dir/__/common/glad/glad.c.s
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/common/glad/glad.c.s
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/common/glad/glad.c.s
 .PHONY : __/common/glad/glad.c.s
 
-gooch-shading.o: gooch-shading.cpp.o
+__/submodules/imgui/backends/imgui_impl_glfw.o: __/submodules/imgui/backends/imgui_impl_glfw.cpp.o
 
-.PHONY : gooch-shading.o
+.PHONY : __/submodules/imgui/backends/imgui_impl_glfw.o
 
 # target to build an object file
-gooch-shading.cpp.o:
-	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/gooch-shading.dir/build.make 5-Shading-Basics/CMakeFiles/gooch-shading.dir/gooch-shading.cpp.o
-.PHONY : gooch-shading.cpp.o
+__/submodules/imgui/backends/imgui_impl_glfw.cpp.o:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/backends/imgui_impl_glfw.cpp.o
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/backends/imgui_impl_glfw.cpp.o
+.PHONY : __/submodules/imgui/backends/imgui_impl_glfw.cpp.o
 
-gooch-shading.i: gooch-shading.cpp.i
+__/submodules/imgui/backends/imgui_impl_glfw.i: __/submodules/imgui/backends/imgui_impl_glfw.cpp.i
 
-.PHONY : gooch-shading.i
+.PHONY : __/submodules/imgui/backends/imgui_impl_glfw.i
 
 # target to preprocess a source file
-gooch-shading.cpp.i:
-	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/gooch-shading.dir/build.make 5-Shading-Basics/CMakeFiles/gooch-shading.dir/gooch-shading.cpp.i
-.PHONY : gooch-shading.cpp.i
+__/submodules/imgui/backends/imgui_impl_glfw.cpp.i:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/backends/imgui_impl_glfw.cpp.i
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/backends/imgui_impl_glfw.cpp.i
+.PHONY : __/submodules/imgui/backends/imgui_impl_glfw.cpp.i
 
-gooch-shading.s: gooch-shading.cpp.s
+__/submodules/imgui/backends/imgui_impl_glfw.s: __/submodules/imgui/backends/imgui_impl_glfw.cpp.s
 
-.PHONY : gooch-shading.s
+.PHONY : __/submodules/imgui/backends/imgui_impl_glfw.s
 
 # target to generate assembly for a file
-gooch-shading.cpp.s:
-	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/gooch-shading.dir/build.make 5-Shading-Basics/CMakeFiles/gooch-shading.dir/gooch-shading.cpp.s
-.PHONY : gooch-shading.cpp.s
+__/submodules/imgui/backends/imgui_impl_glfw.cpp.s:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/backends/imgui_impl_glfw.cpp.s
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/backends/imgui_impl_glfw.cpp.s
+.PHONY : __/submodules/imgui/backends/imgui_impl_glfw.cpp.s
+
+__/submodules/imgui/backends/imgui_impl_opengl3.o: __/submodules/imgui/backends/imgui_impl_opengl3.cpp.o
+
+.PHONY : __/submodules/imgui/backends/imgui_impl_opengl3.o
+
+# target to build an object file
+__/submodules/imgui/backends/imgui_impl_opengl3.cpp.o:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/backends/imgui_impl_opengl3.cpp.o
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/backends/imgui_impl_opengl3.cpp.o
+.PHONY : __/submodules/imgui/backends/imgui_impl_opengl3.cpp.o
+
+__/submodules/imgui/backends/imgui_impl_opengl3.i: __/submodules/imgui/backends/imgui_impl_opengl3.cpp.i
+
+.PHONY : __/submodules/imgui/backends/imgui_impl_opengl3.i
+
+# target to preprocess a source file
+__/submodules/imgui/backends/imgui_impl_opengl3.cpp.i:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/backends/imgui_impl_opengl3.cpp.i
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/backends/imgui_impl_opengl3.cpp.i
+.PHONY : __/submodules/imgui/backends/imgui_impl_opengl3.cpp.i
+
+__/submodules/imgui/backends/imgui_impl_opengl3.s: __/submodules/imgui/backends/imgui_impl_opengl3.cpp.s
+
+.PHONY : __/submodules/imgui/backends/imgui_impl_opengl3.s
+
+# target to generate assembly for a file
+__/submodules/imgui/backends/imgui_impl_opengl3.cpp.s:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/backends/imgui_impl_opengl3.cpp.s
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/backends/imgui_impl_opengl3.cpp.s
+.PHONY : __/submodules/imgui/backends/imgui_impl_opengl3.cpp.s
+
+__/submodules/imgui/imgui.o: __/submodules/imgui/imgui.cpp.o
+
+.PHONY : __/submodules/imgui/imgui.o
+
+# target to build an object file
+__/submodules/imgui/imgui.cpp.o:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/imgui.cpp.o
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/imgui.cpp.o
+.PHONY : __/submodules/imgui/imgui.cpp.o
+
+__/submodules/imgui/imgui.i: __/submodules/imgui/imgui.cpp.i
+
+.PHONY : __/submodules/imgui/imgui.i
+
+# target to preprocess a source file
+__/submodules/imgui/imgui.cpp.i:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/imgui.cpp.i
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/imgui.cpp.i
+.PHONY : __/submodules/imgui/imgui.cpp.i
+
+__/submodules/imgui/imgui.s: __/submodules/imgui/imgui.cpp.s
+
+.PHONY : __/submodules/imgui/imgui.s
+
+# target to generate assembly for a file
+__/submodules/imgui/imgui.cpp.s:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/imgui.cpp.s
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/imgui.cpp.s
+.PHONY : __/submodules/imgui/imgui.cpp.s
+
+__/submodules/imgui/imgui_demo.o: __/submodules/imgui/imgui_demo.cpp.o
+
+.PHONY : __/submodules/imgui/imgui_demo.o
+
+# target to build an object file
+__/submodules/imgui/imgui_demo.cpp.o:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/imgui_demo.cpp.o
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/imgui_demo.cpp.o
+.PHONY : __/submodules/imgui/imgui_demo.cpp.o
+
+__/submodules/imgui/imgui_demo.i: __/submodules/imgui/imgui_demo.cpp.i
+
+.PHONY : __/submodules/imgui/imgui_demo.i
+
+# target to preprocess a source file
+__/submodules/imgui/imgui_demo.cpp.i:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/imgui_demo.cpp.i
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/imgui_demo.cpp.i
+.PHONY : __/submodules/imgui/imgui_demo.cpp.i
+
+__/submodules/imgui/imgui_demo.s: __/submodules/imgui/imgui_demo.cpp.s
+
+.PHONY : __/submodules/imgui/imgui_demo.s
+
+# target to generate assembly for a file
+__/submodules/imgui/imgui_demo.cpp.s:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/imgui_demo.cpp.s
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/imgui_demo.cpp.s
+.PHONY : __/submodules/imgui/imgui_demo.cpp.s
+
+__/submodules/imgui/imgui_draw.o: __/submodules/imgui/imgui_draw.cpp.o
+
+.PHONY : __/submodules/imgui/imgui_draw.o
+
+# target to build an object file
+__/submodules/imgui/imgui_draw.cpp.o:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/imgui_draw.cpp.o
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/imgui_draw.cpp.o
+.PHONY : __/submodules/imgui/imgui_draw.cpp.o
+
+__/submodules/imgui/imgui_draw.i: __/submodules/imgui/imgui_draw.cpp.i
+
+.PHONY : __/submodules/imgui/imgui_draw.i
+
+# target to preprocess a source file
+__/submodules/imgui/imgui_draw.cpp.i:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/imgui_draw.cpp.i
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/imgui_draw.cpp.i
+.PHONY : __/submodules/imgui/imgui_draw.cpp.i
+
+__/submodules/imgui/imgui_draw.s: __/submodules/imgui/imgui_draw.cpp.s
+
+.PHONY : __/submodules/imgui/imgui_draw.s
+
+# target to generate assembly for a file
+__/submodules/imgui/imgui_draw.cpp.s:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/imgui_draw.cpp.s
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/imgui_draw.cpp.s
+.PHONY : __/submodules/imgui/imgui_draw.cpp.s
+
+__/submodules/imgui/imgui_tables.o: __/submodules/imgui/imgui_tables.cpp.o
+
+.PHONY : __/submodules/imgui/imgui_tables.o
+
+# target to build an object file
+__/submodules/imgui/imgui_tables.cpp.o:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/imgui_tables.cpp.o
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/imgui_tables.cpp.o
+.PHONY : __/submodules/imgui/imgui_tables.cpp.o
+
+__/submodules/imgui/imgui_tables.i: __/submodules/imgui/imgui_tables.cpp.i
+
+.PHONY : __/submodules/imgui/imgui_tables.i
+
+# target to preprocess a source file
+__/submodules/imgui/imgui_tables.cpp.i:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/imgui_tables.cpp.i
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/imgui_tables.cpp.i
+.PHONY : __/submodules/imgui/imgui_tables.cpp.i
+
+__/submodules/imgui/imgui_tables.s: __/submodules/imgui/imgui_tables.cpp.s
+
+.PHONY : __/submodules/imgui/imgui_tables.s
+
+# target to generate assembly for a file
+__/submodules/imgui/imgui_tables.cpp.s:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/imgui_tables.cpp.s
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/imgui_tables.cpp.s
+.PHONY : __/submodules/imgui/imgui_tables.cpp.s
+
+__/submodules/imgui/imgui_widgets.o: __/submodules/imgui/imgui_widgets.cpp.o
+
+.PHONY : __/submodules/imgui/imgui_widgets.o
+
+# target to build an object file
+__/submodules/imgui/imgui_widgets.cpp.o:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/imgui_widgets.cpp.o
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/imgui_widgets.cpp.o
+.PHONY : __/submodules/imgui/imgui_widgets.cpp.o
+
+__/submodules/imgui/imgui_widgets.i: __/submodules/imgui/imgui_widgets.cpp.i
+
+.PHONY : __/submodules/imgui/imgui_widgets.i
+
+# target to preprocess a source file
+__/submodules/imgui/imgui_widgets.cpp.i:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/imgui_widgets.cpp.i
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/imgui_widgets.cpp.i
+.PHONY : __/submodules/imgui/imgui_widgets.cpp.i
+
+__/submodules/imgui/imgui_widgets.s: __/submodules/imgui/imgui_widgets.cpp.s
+
+.PHONY : __/submodules/imgui/imgui_widgets.s
+
+# target to generate assembly for a file
+__/submodules/imgui/imgui_widgets.cpp.s:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/__/submodules/imgui/imgui_widgets.cpp.s
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/__/submodules/imgui/imgui_widgets.cpp.s
+.PHONY : __/submodules/imgui/imgui_widgets.cpp.s
+
+phong-shading.o: phong-shading.cpp.o
+
+.PHONY : phong-shading.o
+
+# target to build an object file
+phong-shading.cpp.o:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/phong-shading.cpp.o
+.PHONY : phong-shading.cpp.o
+
+phong-shading.i: phong-shading.cpp.i
+
+.PHONY : phong-shading.i
+
+# target to preprocess a source file
+phong-shading.cpp.i:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/phong-shading.cpp.i
+.PHONY : phong-shading.cpp.i
+
+phong-shading.s: phong-shading.cpp.s
+
+.PHONY : phong-shading.s
+
+# target to generate assembly for a file
+phong-shading.cpp.s:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/phong-shading.dir/build.make 5-Shading-Basics/CMakeFiles/phong-shading.dir/phong-shading.cpp.s
+.PHONY : phong-shading.cpp.s
+
+punctual-lights.o: punctual-lights.cpp.o
+
+.PHONY : punctual-lights.o
+
+# target to build an object file
+punctual-lights.cpp.o:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/punctual-lights.cpp.o
+.PHONY : punctual-lights.cpp.o
+
+punctual-lights.i: punctual-lights.cpp.i
+
+.PHONY : punctual-lights.i
+
+# target to preprocess a source file
+punctual-lights.cpp.i:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/punctual-lights.cpp.i
+.PHONY : punctual-lights.cpp.i
+
+punctual-lights.s: punctual-lights.cpp.s
+
+.PHONY : punctual-lights.s
+
+# target to generate assembly for a file
+punctual-lights.cpp.s:
+	cd /home/mica/Desktop/Books/Real-Time-Rendering/build && $(MAKE) -f 5-Shading-Basics/CMakeFiles/punctual-lights.dir/build.make 5-Shading-Basics/CMakeFiles/punctual-lights.dir/punctual-lights.cpp.s
+.PHONY : punctual-lights.cpp.s
 
 # Help Target
 help:
@@ -237,13 +492,38 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... gooch-shading"
+	@echo "... punctual-lights"
+	@echo "... phong-shading"
 	@echo "... __/common/glad/glad.o"
 	@echo "... __/common/glad/glad.i"
 	@echo "... __/common/glad/glad.s"
-	@echo "... gooch-shading.o"
-	@echo "... gooch-shading.i"
-	@echo "... gooch-shading.s"
+	@echo "... __/submodules/imgui/backends/imgui_impl_glfw.o"
+	@echo "... __/submodules/imgui/backends/imgui_impl_glfw.i"
+	@echo "... __/submodules/imgui/backends/imgui_impl_glfw.s"
+	@echo "... __/submodules/imgui/backends/imgui_impl_opengl3.o"
+	@echo "... __/submodules/imgui/backends/imgui_impl_opengl3.i"
+	@echo "... __/submodules/imgui/backends/imgui_impl_opengl3.s"
+	@echo "... __/submodules/imgui/imgui.o"
+	@echo "... __/submodules/imgui/imgui.i"
+	@echo "... __/submodules/imgui/imgui.s"
+	@echo "... __/submodules/imgui/imgui_demo.o"
+	@echo "... __/submodules/imgui/imgui_demo.i"
+	@echo "... __/submodules/imgui/imgui_demo.s"
+	@echo "... __/submodules/imgui/imgui_draw.o"
+	@echo "... __/submodules/imgui/imgui_draw.i"
+	@echo "... __/submodules/imgui/imgui_draw.s"
+	@echo "... __/submodules/imgui/imgui_tables.o"
+	@echo "... __/submodules/imgui/imgui_tables.i"
+	@echo "... __/submodules/imgui/imgui_tables.s"
+	@echo "... __/submodules/imgui/imgui_widgets.o"
+	@echo "... __/submodules/imgui/imgui_widgets.i"
+	@echo "... __/submodules/imgui/imgui_widgets.s"
+	@echo "... phong-shading.o"
+	@echo "... phong-shading.i"
+	@echo "... phong-shading.s"
+	@echo "... punctual-lights.o"
+	@echo "... punctual-lights.i"
+	@echo "... punctual-lights.s"
 .PHONY : help
 
 

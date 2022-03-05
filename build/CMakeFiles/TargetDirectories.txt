@@ -31,4 +31,5 @@
 /home/mica/Desktop/Books/Real-Time-Rendering/build/5-Shading-Basics/CMakeFiles/list_install_components.dir
 /home/mica/Desktop/Books/Real-Time-Rendering/build/5-Shading-Basics/CMakeFiles/rebuild_cache.dir
 /home/mica/Desktop/Books/Real-Time-Rendering/build/5-Shading-Basics/CMakeFiles/edit_cache.dir
-/home/mica/Desktop/Books/Real-Time-Rendering/build/5-Shading-Basics/CMakeFiles/gooch-shading.dir
+/home/mica/Desktop/Books/Real-Time-Rendering/build/5-Shading-Basics/CMakeFiles/punctual-lights.dir
+/home/mica/Desktop/Books/Real-Time-Rendering/build/5-Shading-Basics/CMakeFiles/phong-shading.dir
